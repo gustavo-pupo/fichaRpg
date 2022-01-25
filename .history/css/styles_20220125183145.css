@@ -1,0 +1,119 @@
+body,body *{
+    padding: 0;
+    margin: 0;
+    background-color: #f2f2f2;
+}
+
+/* tags */
+
+/* classes */
+
+/* ids */
+div#geral{
+    width: 70%;
+    height: 100%;
+    margin: 1% 0 0 15%;
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid black; */
+    border-radius: 2vh;
+    overflow: hidden;
+    box-shadow: 0 0 5rem #1B1821;
+}
+
+div#infos{
+    width: 100%;
+    /* border: 1px solid pink; */
+    display: flex;
+    flex-direction: row;
+
+}
+
+div#status{
+    display: flex;
+    flex-direction: column;
+    /* border:  1px solid purple; */
+    text-align: center;
+    align-items: center;
+}
+
+div#status input{
+    text-align: center;
+}
+
+div#status button{
+    width: 40%;
+    height: 40px;
+    margin: 10% 0 0 0;
+}
+
+div#atributos{
+    padding: 1.5% 0% 0 0;
+    align-items: center;
+    /* border: 1px solid yellow; */
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+}
+
+#nivel, #vidaMax, #manaMax, #qtdVida, #qtdMana{
+    font-size: 1.2rem;
+    width: 50%;
+    margin: 0 0 5% 0;
+}
+
+div#atributos input{
+    font-size: 1.5rem;
+    width: 50%;
+    margin: 0 0 1% 0;
+    text-align: center;
+}
+
+div#infos label{
+    font-size: 1.5rem;
+}
+
+div#infos img{
+    width: 35%;
+    border-radius: 2vh;
+    margin: 0 6% 0 0;
+    margin: 0.5%;
+    /* border: 1px solid gold; */
+    /* box-shadow: 0 0 3rem gold;   */
+    
+}
+
+div#infos h2{
+    font-size: 2.5rem;
+    margin: 5% 0 12% 0;
+}
+
+div#atributos h2{
+    text-align: center;
+    margin: 0 0 5% 0;
+}
+
+div#dinheiro{
+    width: 50%;
+    height: 100%;
+    margin: 0 0 0 25%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 1%;
+}
+
+div#dinheiro input{
+    height: 30px;
+    width: 80%;
+    margin: 0 0 0 10%;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+div#baixo{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+

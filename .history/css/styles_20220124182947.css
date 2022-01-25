@@ -1,0 +1,59 @@
+body,body *{
+    padding: 0;
+    margin: 0;
+}
+
+/* tags */
+
+/* classes */
+
+/* ids */
+div#geral{
+    width: 60%;
+    margin: 1% 0 0 20%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+}
+
+div#infos{
+    width: 100%;
+    border: 1px solid pink;
+    display: flex;
+    flex-direction: row;
+}
+
+div#status{
+    display: flex;
+    flex-direction: column;
+    padding: 3%;
+}
+
+div#status button{
+    width: 40%;
+    height: 10%;
+}
+
+div#atributos{
+    padding: 12.5% 0 0 0;
+    text-align: right;
+}
+
+div#infos input{
+    font-size: 1.5rem;
+    width: 50%;
+    margin: 0 0 2% 0;
+}
+
+div#infos label{
+    font-size: 1.5rem;
+}
+
+div#infos img{
+    width: 35%;
+    padding: 2% 0 0 2%;
+}
+
+div#infos h2{
+    font-size: 2.5rem;
+}
