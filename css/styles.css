@@ -31,6 +31,7 @@ input{
 
 select{
     font-size: 1.5rem;
+    margin: 0 0 4% 0;
 }
 
 /* classes */
@@ -51,7 +52,7 @@ div#geral{
 
 div#infos{
     width: 100%;
-    border: 1px solid pink;
+    /* border: 1px solid pink; */
     display: flex;
     flex-direction: column;
 }
@@ -63,7 +64,7 @@ div#status{
     width: 100%;
     /* text-align: center; */
     align-items: center;
-    margin: 0 0 0 0;
+    margin: 2% 0 0 0;
 }
 
 
@@ -75,7 +76,7 @@ div#atributos{
     padding: 2% 0 2% 0;
     margin: 0 0 5% 0;
     align-items: center;
-    border: 1px solid yellow;
+    /* border: 1px solid yellow; */
     display: flex;
     flex-direction: column;
     width: 50%;
@@ -92,7 +93,7 @@ div#atributos{
     width: 50%;
     display: flex;
     flex-direction: column;
-    border: 1px solid slateblue;
+    /* border: 1px solid slateblue; */
     padding: 0 0 0 6%;
 }
 
@@ -105,7 +106,7 @@ div#nomeDiv input{
     display: flex;
     flex-direction: column;
     width: 50%;
-    border: 1px solid fuchsia;
+    /* border: 1px solid fuchsia; */
     padding: 0 0 0 8%;
 }
 
@@ -150,7 +151,7 @@ div#dinheiro{
     flex-direction: column;
     text-align: center;
     padding: 1%;
-    border: 1px solid aquamarine;
+    /* border: 1px solid aquamarine; */
 }
 
 div#dinheiro input{
@@ -169,5 +170,31 @@ div#baixo{
     width: 100%;
     display: flex;
     flex-direction: row;
+}
+
+@media (max-width: 600px){
+    label, p{
+        color: #f2f2f2;
+        text-shadow: 1px 1px 1rem black;
+    }
+    
+    div#geral{
+    width: 96%;
+    box-shadow: 0 0 0 0;
+    background-color: transparent;
+    border-radius: 0;
+    }
+    div#baixo{
+        display: flex;
+        flex-direction:column;
+        width: 100%;
+    }
+    div#dinheiro{
+        width: 98%;
+        margin: 0;
+    }
+    div#atributos{
+        width: 100%;
+    }
 }
 

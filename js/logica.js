@@ -26,7 +26,7 @@ window.onload = function(){
     
     classe.value = localStorage.getItem("classe");
 
-    mudarBG();
+    mudarBG();    
 
     garantir(bronze);
     garantir(prata);
@@ -84,20 +84,42 @@ function garantirMana(){
 
 
 function mudarBG(){
-    if(classe.value == 1){
-        document.body.style.backgroundImage = "url('../imagens/guerreiro.jpg')";
-        document.body.style.backgroundRepeat = "no-repeat";
-        document.body.style.backgroundSize = "100%";
-    }else if(classe.value == 2){
-        document.body.style.backgroundImage = "url('../imagens/arqueiro.jpg')";
-        document.body.style.backgroundRepeat = "no-repeat";
-        document.body.style.backgroundSize = "100%";
-    }else if(classe.value == 3){
-        document.body.style.backgroundImage = "url('../imagens/espadachim.png')";
-        document.body.style.backgroundRepeat = "no-repeat";
-        document.body.style.backgroundSize = "100%";
-    }else if(classe.value == 0){
-        document.body.style.backgroundColor = "#f2f2f2";
+    if(window.innerWidth > 600){
+        if(classe.value == 1){
+            document.body.style.backgroundImage = "url('../imagens/guerreiro.jpg')";
+            document.body.style.backgroundRepeat = "no-repeat";
+            document.body.style.backgroundSize = "100%";
+        }else if(classe.value == 2){
+            document.body.style.backgroundImage = "url('../imagens/arqueiro.jpg')";
+            document.body.style.backgroundRepeat = "no-repeat";
+            document.body.style.backgroundSize = "100%";
+        }else if(classe.value == 3){
+            document.body.style.backgroundImage = "url('../imagens/espadachim.png')";
+            document.body.style.backgroundRepeat = "no-repeat";
+            document.body.style.backgroundSize = "100%";
+        }else if(classe.value == 0){
+            document.body.style.backgroundColor = "#f2f2f2";
+        }
+    }else{
+        if(classe.value == 1){
+            document.body.style.backgroundImage = "url('../imagens/guerreiro.jpg')";
+            document.body.style.backgroundRepeat = "no-repeat";
+            document.body.style.backgroundSize = "450%";
+            document.body.style.backgroundPosition = "90% 0";
+            
+        }else if(classe.value == 2){
+            document.body.style.backgroundImage = "url('../imagens/arqueiro.jpg')";
+            document.body.style.backgroundRepeat = "no-repeat";
+            document.body.style.backgroundSize = "400%";
+            document.body.style.backgroundPosition = "70% 0";
+        }else if(classe.value == 3){
+            document.body.style.backgroundImage = "url('../imagens/espadachim.png')";
+            document.body.style.backgroundRepeat = "no-repeat";
+            document.body.style.backgroundSize = "400%";
+            document.body.style.backgroundPosition = "65% 0";
+        }else if(classe.value == 0){
+            document.body.style.backgroundColor = "#f2f2f2";
+        }
     }
 }
 
