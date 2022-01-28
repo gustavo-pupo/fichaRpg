@@ -86,15 +86,15 @@ function garantirMana(){
 function mudarBG(){
     if(window.innerWidth > 600){
         if(classe.value == 1){
-            document.body.style.backgroundImage = "url('../imagens/guerreiro.jpg')";
+            document.body.style.backgroundImage = "url('https://cdn.discordapp.com/attachments/427636632439619584/936726626455146516/thumb-1920-994122.jpg')";
             document.body.style.backgroundRepeat = "no-repeat";
             document.body.style.backgroundSize = "100%";
         }else if(classe.value == 2){
-            document.body.style.backgroundImage = "url('../imagens/arqueiro.jpg')";
+            document.body.style.backgroundImage = "url('https://cdn.discordapp.com/attachments/427636632439619584/936723825553457192/787873.jpg')";
             document.body.style.backgroundRepeat = "no-repeat";
             document.body.style.backgroundSize = "100%";
         }else if(classe.value == 3){
-            document.body.style.backgroundImage = "url('../imagens/espadachim.png')";
+            document.body.style.backgroundImage = "url('https://cdn.discordapp.com/attachments/427636632439619584/936768166749679646/espadachim.png')";
             document.body.style.backgroundRepeat = "no-repeat";
             document.body.style.backgroundSize = "100%";
         }else if(classe.value == 0){
@@ -102,18 +102,18 @@ function mudarBG(){
         }
     }else{
         if(classe.value == 1){
-            document.body.style.backgroundImage = "url('../imagens/guerreiro.jpg')";
+            document.body.style.backgroundImage = "url('https://cdn.discordapp.com/attachments/427636632439619584/936726626455146516/thumb-1920-994122.jpg')";
             document.body.style.backgroundRepeat = "no-repeat";
             document.body.style.backgroundSize = "450%";
             document.body.style.backgroundPosition = "90% 0";
             
         }else if(classe.value == 2){
-            document.body.style.backgroundImage = "url('../imagens/arqueiro.jpg')";
+            document.body.style.backgroundImage = "url('https://cdn.discordapp.com/attachments/427636632439619584/936723825553457192/787873.jpg')";
             document.body.style.backgroundRepeat = "no-repeat";
             document.body.style.backgroundSize = "400%";
             document.body.style.backgroundPosition = "70% 0";
         }else if(classe.value == 3){
-            document.body.style.backgroundImage = "url('../imagens/espadachim.png')";
+            document.body.style.backgroundImage = "url('https://cdn.discordapp.com/attachments/427636632439619584/936768166749679646/espadachim.png')";
             document.body.style.backgroundRepeat = "no-repeat";
             document.body.style.backgroundSize = "400%";
             document.body.style.backgroundPosition = "65% 0";
