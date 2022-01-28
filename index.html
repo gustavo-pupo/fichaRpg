@@ -10,21 +10,38 @@
 <body> 
     <div id="geral">    
         <div id="infos">
-            <img src="imagens/LanCut.png" alt="">
         <div id="status">
-                <h2 id="nome">Lanthorn</h2>
+            <div id="nomeDiv">
+            <label for="nome">Nome:</label>
+                <input placeholder="Ex: Carla" type="text" id="nome">
             <label for="nivel">Nível:</label>
                 <input type="number" min="0" name="nivel" value="" id="nivel"/>
-            <label for="vida">Vida:</label>
-                <input type="text" readonly name="vida" value="" id="vidaMax">
-                <input type="number" min="0" id="qtdVida">
-            <label for="mana">Mana:</label>
-                <input type="text" readonly name="mana" value="" id="manaMax">
-                <input type="number" min="0" id="qtdMana">
-            <button onclick="salvar()">Salvar</button>
             </div>
+            
+            <div id="vidaMana">
+            <label for="vida">Vida:</label>
+                <div id="vida">
+            <input type="number" min="0" id="qtdVida">
+                <p id="vidaMax"></p>
+                </div>
+                <label for="mana">Mana:</label>
+                <div id="mana">
+            <input type="number" min="0" id="qtdMana">
+                <p id="manaMax"></p>
+                </div>
+            </div>
+            </div>
+            <button onclick="salvar()">Salvar</button>
+            
+        </div>
+        <div id="baixo">
             <div id="atributos">
-                <h2>Atributos</h2>
+                <select onchange="mudarBG()" name="classes" id="classes">
+                    <option selected disabled value="0">Classe</option>
+                    <option value="1">Guerreiro</option>
+                    <option value="2">Arqueiro</option>
+                    <option value="3">Espadachim</option>
+                </select>
                 <label for="con">Constituição:</label>
                     <input type="number" min="0" id="con" name="con">
                 <label for="for">Força:</label>
@@ -35,9 +52,7 @@
                     <input type="number" min="0" id="int" name="int">
                 <label for="fai">Fé:</label>
                     <input type="number" min="0" id="fai" name="fai">
-            </div>
-        </div>
-        <div id="baixo">    
+            </div>    
             <div id="dinheiro">
                 <label for="platina">Platina:</label>
                     <input type="number" min="0" name="platina" id="plat">

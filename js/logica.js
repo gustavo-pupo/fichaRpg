@@ -1,15 +1,17 @@
 window.onload = function(){
     
+    nome.value = localStorage.getItem("nome");
+
     nivel.value = localStorage.getItem("nivel");
 
     constituicao.value = localStorage.getItem("const");
     var vida = constituicao.value*50;
-    maxVida.value = vida;
+    maxVida.innerHTML = "/" + vida;
     qtdVida.value = localStorage.getItem("qtdVida");
 
     intel.value = localStorage.getItem("int");
     var mana = intel.value*5;
-    maxMana.value = mana;
+    maxMana.innerHTML = "/" + mana;
     qtdMana.value = localStorage.getItem("qtdMana");
     /////////////////////////
     forca.value = localStorage.getItem("for");
@@ -21,8 +23,25 @@ window.onload = function(){
     ouro.value = localStorage.getItem("ouro");
     prata.value = localStorage.getItem("prata");
     bronze.value = localStorage.getItem("bronze");
+    
+    classe.value = localStorage.getItem("classe");
+
+    mudarBG();
+
+    garantir(bronze);
+    garantir(prata);
+    garantir(ouro);
+    garantir(platina);
+    garantir(forca);
+    garantir(constituicao);
+    garantir(dex);
+    garantir(intel);
+    garantir(fai);
+    garantirVida();
+    garantirMana();
 }
 
+var nome = document.getElementById("nome");
 var nivel = document.getElementById("nivel");
 var maxVida = document.getElementById("vidaMax");
 var qtdVida = document.getElementById("qtdVida");
@@ -41,11 +60,54 @@ var ouro = document.getElementById("ouro");
 var prata = document.getElementById("prata");
 var bronze = document.getElementById("bronze");
 
+var classe = document.getElementById("classes");
+
+function garantir(atributo){
+    if(atributo.value == ''){
+        atributo.value = 0;
+    }
+}
+
+function garantirVida(){
+    vida = constituicao.value*50;
+    if(qtdVida.value == ''){
+        qtdVida.value = vida;
+    }
+}
+
+function garantirMana(){
+    mana = intel.value*5;
+    if(qtdMana.value == ''){
+        qtdMana.value = mana;
+    }
+}
+
+
+function mudarBG(){
+    if(classe.value == 1){
+        document.body.style.backgroundImage = "url('../imagens/guerreiro.jpg')";
+        document.body.style.backgroundRepeat = "no-repeat";
+        document.body.style.backgroundSize = "100%";
+    }else if(classe.value == 2){
+        document.body.style.backgroundImage = "url('../imagens/arqueiro.jpg')";
+        document.body.style.backgroundRepeat = "no-repeat";
+        document.body.style.backgroundSize = "100%";
+    }else if(classe.value == 3){
+        document.body.style.backgroundImage = "url('../imagens/espadachim.png')";
+        document.body.style.backgroundRepeat = "no-repeat";
+        document.body.style.backgroundSize = "100%";
+    }else if(classe.value == 0){
+        document.body.style.backgroundColor = "#f2f2f2";
+    }
+}
+
 function salvar(){
+    localStorage.setItem("nome", nome.value)
+
     localStorage.setItem("nivel",nivel.value);
-    localStorage.setItem("vidaMax",maxVida.value);
+    // localStorage.setItem("vidaMax",maxVida.value);
     localStorage.setItem("qtdVida",qtdVida.value);
-    localStorage.setItem("manaMax",maxMana.value);
+    // localStorage.setItem("manaMax",maxMana.value);
     localStorage.setItem("qtdMana",qtdMana.value);
 
     localStorage.setItem("const",constituicao.value);
@@ -54,12 +116,15 @@ function salvar(){
     localStorage.setItem("int",intel.value);
     localStorage.setItem("fai",fai.value);
 
+    localStorage.setItem("classe", classe.value)
+
     while(bronze.value >= 100){
         bronze.value = bronze.value - 100;
         prata.value = parseInt(prata.value) + 1;
     }
 
     while(prata.value >= 100){
+        
         prata.value = prata.value - 100;
         ouro.value = parseInt(ouro.value) + 1;
     }
@@ -73,6 +138,12 @@ function salvar(){
     localStorage.setItem("ouro",ouro.value);
     localStorage.setItem("prata",prata.value);
     localStorage.setItem("bronze",bronze.value);
+
+    // if(classe.value == 1){
+    //     document.body.style.backgroundImage = "url('guerreiro.jpg')";
+    // }
     
+    
+
     location.reload();
 }
